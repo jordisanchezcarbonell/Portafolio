@@ -27,7 +27,7 @@ const navItems: NavItem[] = [
   {
     title: "Contacto",
     label: "contacto",
-    url: "mailto:miduga@gmail.com",
+    url: "/#contacto",
   },
 ];
 

@@ -69,8 +69,9 @@ const HomePage: React.FC = () => {
         </SectionContainer>
 
         {/* Sección sobre mí */}
-
-        <EmailTemplate firstName={"Jordi"} />
+        <SectionContainer id="contacto" className={""}>
+          <EmailTemplate firstName={"Jordi"} />
+        </SectionContainer>
       </div>
     </main>
   );
