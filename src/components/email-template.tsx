@@ -12,8 +12,6 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     className="mt-10 flex flex-col gap-5"
     action={async (formData: FormData) => {
       "use server";
-
-      console.log(formData);
       await sendEmail(formData);
     }}
   >
