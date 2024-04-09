@@ -1,8 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import GitHub from "./icons/GitHub";
 import NextJS from "./icons/NextJS";
 import Tailwind from "./icons/Tailwind";
+import TypeScript from "./icons/TypeScript";
+import Jest from "./icons/Jest";
+import Nestjs from "./icons/Nestjs";
+import PostgressIcon from "./icons/PostgressIcon";
+import ReactIcon from "./icons/React";
+import Strapi from "./icons/Strapi";
+import PythonIcon from "./icons/PythonIcon";
 import Link from "./icons/Link";
 import LinkButton from "./LinkButton";
 
@@ -32,26 +40,141 @@ const TAGS: { [key: string]: Tag } = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-black text-white",
+    icon: TypeScript,
+  },
+  JEST: {
+    name: "JEST",
+    class: "bg-black text-white",
+    icon: Jest,
+  },
+  Nestjs: {
+    name: "Nestjs",
+    class: "bg-black text-white",
+    icon: Nestjs,
+  },
+  PostgressIcon: {
+    name: "Postgress",
+    class: "bg-black text-white",
+    icon: PostgressIcon,
+  },
+  ReactIcon: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: ReactIcon,
+  },
+  Strapi: {
+    name: "Strapi",
+    class: "bg-black text-white",
+    icon: Strapi,
+  },
+  PythonIcon: {
+    name: "Python",
+    class: "bg-[#003159] text-white",
+    icon: PythonIcon,
+  },
 };
 
 const PROJECTS: Project[] = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Elecsum",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
+      "Elecsum es una plataforma de energía renovable que permite a los usuarios comprar energía solar de forma sencilla y segura. Creada desde cero con Next.js, React.",
+    link: "https://share.elecsum.com/",
     image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [
+      TAGS.NEXT,
+      TAGS.ReactIcon,
+      TAGS.TYPESCRIPT,
+      TAGS.PostgressIcon,
+      TAGS.PythonIcon,
+    ],
   },
-  {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
+  // {
+  //   title: "Elecsum App",
+  //   description:
+  //     "Aplicacion movil para los usuarios de elecsum tanto cliente como administrador, puedan gestionar sus servicios y productos. Creado desde cero con React Native.",
+  //   link: "https://play.google.com/store/apps/details?id=com.elecsum.app",
+  //   image: "/projects/svgl.webp",
+  //   tags: [
+  //     TAGS.ReactIcon,
+  //     TAGS.TYPESCRIPT,
+  //     TAGS.PostgressIcon,
+  //     TAGS.PythonIcon,
+  //   ],
+  // },
+  // {
+  //   title: "Eunoia Web",
+  //   description:
+  //     "Web corporativa de Eunoia, una empresa de tecnología que ofrece soluciones de software a medida. Creada desde cero con Next.js, React",
+  //   link: "https://www.eunoia.es/",
+  //   image: "/projects/adventjs.webp",
+  //   tags: [TAGS.NEXT, TAGS.ReactIcon, TAGS.Strapi, TAGS.TYPESCRIPT],
+  // },
+  // {
+  //   title: "Biovert",
+  //   description:
+  //     "Web de productos que dan soluciones manvert, efectivas y sostenibles, para maximizar el rendimiento y la calidad de tus cultivos.",
+  //   link: "https://manvert.com/",
+  //   image: "/projects/adventjs.webp",
+  //   tags: [
+  //     TAGS.NEXT,
+  //     TAGS.TYPESCRIPT,
+  //     TAGS.PostgressIcon,
+  //     TAGS.ReactIcon,
+  //     TAGS.Strapi,
+  //     TAGS.PythonIcon,
+  //   ],
+  // },
+  // {
+  //   title: "Dentaid",
+  //   description:
+  //     "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
+  //   link: "https://adventjs.dev",
+  //   image: "/projects/adventjs.webp",
+  //   tags: [
+  //     TAGS.NEXT,
+  //     TAGS.TAILWIND,
+  //     TAGS.TYPESCRIPT,
+  //     TAGS.JEST,
+  //     TAGS.Nestjs,
+  //     TAGS.PostgressIcon,
+  //     TAGS.ReactIcon,
+  //     TAGS.Strapi,
+  //   ],
+  // },
+  // {
+  //   title: "Exclusiverse",
+  //   description:
+  //     "Landing page para la empresa Exclusiverse donde se informa de los beneficios de los NFT y como se pueden adquirir para viajar.",
+  //   link: "https://adventjs.dev",
+  //   image: "/projects/adventjs.webp",
+  //   tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TYPESCRIPT],
+  // },
+  // {
+  //   title: "JOM",
+  //   description:
+  //     "Control de flota de coches y motos donde se puede gestionar sus asignaciones, mantenimientos y revisiones.",
+  //   link: "https://adventjs.dev",
+  //   image: "/projects/adventjs.webp",
+  //   tags: [
+  //     TAGS.NEXT,
+  //     TAGS.TYPESCRIPT,
+  //     TAGS.JEST,
+  //     TAGS.Nestjs,
+  //     TAGS.PostgressIcon,
+  //     TAGS.ReactIcon,
+  //   ],
+  // },
+  // {
+  //   title: "Muris",
+  //   description:
+  //     "Software de control de almacenes y stock para empresas de logística y transporte.",
+  //   image: "/projects/adventjs.webp",
+  //   tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.PythonIcon, TAGS.PostgressIcon],
+  // },
 ];
 
 const ProjectList: React.FC = () => {
@@ -68,7 +191,6 @@ const ProjectList: React.FC = () => {
                 <img
                   alt="Recién llegado vs 5 años en Nueva Zelanda"
                   className="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-                  loading="lazy"
                   src={image}
                 />
               </div>
