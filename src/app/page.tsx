@@ -1,42 +1,47 @@
 // Importaciones de componentes
-import AboutMe from "@/components/AboutMe";
-import Briefcase from "@/components/icons/Briefcase";
-import CodeIcon from "@/components/icons/Code";
-import Experience from "@/components/Experience";
-import ProfileCheck from "@/components/icons/ProfileCheck";
-import Projects from "@/components/Projects";
-import SectionContainer from "@/components/SectionContainer";
-import Hero from "@/components/Hero";
-import Footer from "@/components/Footer";
-import EmailTemplate from "@/components/email-template";
+import AboutMe from '@/components/AboutMe';
+import Briefcase from '@/components/icons/Briefcase';
+import CodeIcon from '@/components/icons/Code';
+import Experience from '@/components/Experience';
+import ProfileCheck from '@/components/icons/ProfileCheck';
+import Projects from '@/components/Projects';
+import SectionContainer from '@/components/SectionContainer';
+import Hero from '@/components/Hero';
+import EmailTemplate from '@/components/email-template';
 
 const EXPERIENCIE = [
   {
-    date: "Actualmente...",
-    title: "Creador de Contenido",
-    company: "Twitch",
+    date: 'Actualmente...',
+    title: 'Desarrollador Full Stack',
+    company: 'Eunoia Digital',
     description:
-      "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
-    link: "https://twitch.tv/midudev",
+      'Desarrollador Full Stack en Eunoia Digital, responsable de diseñar e implementar interfaces de usuario atractivas y funcionales utilizando tecnologías como React, Next.js, TypeScript, Tailwind, CSS, Nest.js y Python.',
   },
   {
-    date: "Septiembre 2022",
-    title: "Principal Frontend Engineer",
-    company: "Adevinta Spain",
+    date: 'Sep 2020 - Abr 2022',
+    title: 'Desarrollador Full Stack',
+    company: 'Ogilvy',
     description:
-      "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
+      'Trabajé en proyectos internacionales con Drupal 7/8, donde realicé tareas de sitebuilding, solución de errores (bug fixing) y administración de contenido. Además, me encargué del aseguramiento de la calidad utilizando herramientas como Selenium y New Relic. También tengo experiencia en el uso de Sass, Bootstrap y CSS para el diseño y desarrollo de interfaces de usuario, así como en el desarrollo de aplicaciones web con Angular y React.',
+  },
+  {
+    date: 'Abr 2018 - Jun 2019',
+    title: 'Desarrollador Web',
+    company: 'Jausas Legal',
+    description:
+      'Mi experiencia laboral incluye trabajar con Pardot y Wordpress, donde estuve involucrado en diversas tareas como la gestión de bases de datos, la creación y modificación de landing pages en Pardot, así como la gestión de contenido en Wordpress.',
   },
 ];
 const HomePage: React.FC = () => {
   return (
-    <main className="px-4">
-      <SectionContainer className="py-16 md:py-36" id={""}>
-        <Hero>{/* Contenido del héroe */}</Hero>
+    <main>
+      <SectionContainer id="Inicio" className="py-16 md:py-36">
+        <Hero />
       </SectionContainer>
 
       <div className="space-y-24">
         {/* Sección de experiencia laboral */}
-        <SectionContainer id="experiencia" className={""}>
+        <SectionContainer id="Experiencia" className={''}>
           <>
             <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
               <Briefcase className="size-8" />
@@ -47,7 +52,7 @@ const HomePage: React.FC = () => {
         </SectionContainer>
 
         {/* Sección de proyectos */}
-        <SectionContainer id="proyectos" className={""}>
+        <SectionContainer id="Proyectos" className={''}>
           <>
             <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
               <CodeIcon className="size-7" />
@@ -58,19 +63,19 @@ const HomePage: React.FC = () => {
         </SectionContainer>
 
         {/* Sección sobre mí */}
-        <SectionContainer id="sobre-mi" className={""}>
+        <SectionContainer id="Sobre mí" className={''}>
           <>
             <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white">
               <ProfileCheck className="size-8" />
               Sobre mí
             </h2>
-            <AboutMe personalImageAlt={""} />
+            <AboutMe personalImageAlt={''} />
           </>
         </SectionContainer>
 
         {/* Sección sobre mí */}
-        <SectionContainer id="contacto" className={""}>
-          <EmailTemplate firstName={"Jordi"} />
+        <SectionContainer id="Contacto" className={''}>
+          <EmailTemplate firstName={'Jordi'} />
         </SectionContainer>
       </div>
     </main>

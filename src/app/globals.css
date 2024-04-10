@@ -80,7 +80,7 @@
 }
 
 html {
-  font-family: "Onest Variable", system-ui, sans-serif;
+  font-family: 'Onest Variable', system-ui, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -165,11 +165,11 @@ body {
     opacity: 1;
   }
 }
-nav {
+/* nav {
   animation: nav-shadown 1s linear both;
   animation-timeline: scroll();
   animation-range: 0 100px;
-}
+} */
 
 .link-card {
   list-style: none;

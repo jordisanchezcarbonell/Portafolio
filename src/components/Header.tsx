@@ -1,6 +1,6 @@
-"use client";
-import React, { useEffect } from "react";
-import ThemeToggle from "./ThemeToggle";
+'use client';
+import React, { useEffect } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 interface NavItem {
   title: string;
@@ -10,68 +10,28 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    title: "Experiencia",
-    label: "experiencia",
-    url: "/#experiencia",
+    title: 'Experiencia',
+    label: 'experiencia',
+    url: '/#experiencia',
   },
   {
-    title: "Proyectos",
-    label: "proyectos",
-    url: "/#proyectos",
+    title: 'Proyectos',
+    label: 'proyectos',
+    url: '/#proyectos',
   },
   {
-    title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
+    title: 'Sobre mí',
+    label: 'sobre-mi',
+    url: '/#sobre-mi',
   },
   {
-    title: "Contacto",
-    label: "contacto",
-    url: "/#contacto",
+    title: 'Contacto',
+    label: 'contacto',
+    url: '/#contacto',
   },
 ];
 
 const Header: React.FC = () => {
-  useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll("header nav a");
-
-    const callback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") === entry.target.id) {
-              item.classList.add("text-yellow-500");
-            } else {
-              item.classList.remove("text-yellow-500");
-            }
-          });
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
-    });
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    // Cleanup function
-    document.onvisibilitychange = () => {
-      if (document.visibilityState === "hidden") {
-        observer.disconnect();
-      } else {
-        sections.forEach((section) => {
-          observer.observe(section);
-        });
-      }
-    };
-  }, []);
-
   return (
     <header className="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
       <nav className="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center">

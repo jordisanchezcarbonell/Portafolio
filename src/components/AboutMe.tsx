@@ -1,41 +1,42 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+'use client';
+import { useSectionInView } from '@/lib/hooks';
+import React from 'react';
 
 interface PersonalInfoProps {
   personalImageAlt: string;
 }
 
 const PersonalInfo = ({ personalImageAlt }: PersonalInfoProps) => {
+  const { ref } = useSectionInView('Sobremí');
   return (
-    <article className="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+    <article
+      className="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+      id="sobre-mi"
+      ref={ref}
+    >
       <div className="order-2 md:order-1">
-        <p className="mb-4 text-pretty">
-          Me llamo Jordi Sánchez Carbonell pero mis amigos me llaman midu.
-          Empecé en la programación con un Amstrad, tenía 10 años. Actualmente
-          estoy{" "}
+        <p className="mb-4">
+          ¡Hola! Soy Jordi, un desarrollador web apasionado con experiencia
+          tanto en front-end como en back-end. Me especializo en tecnologías
+          como
           <strong className="text-yellow-500 dark:text-yellow-100 font-normal font-mono">
-            liderando equipos de desarrollo en multinacionales
-          </strong>
-          .
+            {' '}
+            React, Next.js, Node.js y Nest.js{' '}
+          </strong>{' '}
+          creando aplicaciones robustas y escalables.
         </p>
-        <p className="text-pretty">
-          Algunos de mis éxitos incluyen{" "}
-          <strong className="text-yellow-500 dark:text-yellow-100 font-normal font-mono">
-            colaborar con Mozilla para el desarrollo de las primeras apps en su
-            sistema FirefoxOS
-          </strong>
-          . Aunque hoy está desaparecido fue un gran avance en el mundo del
-          desarrollo web.
+        <p className="mb-4">
+          Fuera del trabajo, soy un entusiasta del deporte y un seguidor ávido
+          de la NFL y la UFC. También tengo un gran interés en la ciberseguridad
+          y disfruto mantenerme al día con las últimas noticias y tendencias en
+          este campo.
         </p>
-        <p className="text-pretty">
-          Como creador de contenido,{" "}
-          <strong className="text-yellow-500 dark:text-yellow-100 font-normal font-mono">
-            cuento con el canal de habla hispana más visto del mundo en la
-            categoría de <em className="italic">Software & Game Development</em>{" "}
-            en Twitch
-          </strong>
-          . Mi objetivo es mejorar la empleabilidad de la comunidad hispana y el
-          acceso a contenido de calidad.
+        <p>
+          En mi tiempo libre, me encanta sumergirme en un buen libro y ampliar
+          mis horizontes. Estoy emocionado de enfrentar nuevos desafíos tanto en
+          mi carrera como en mis pasatiempos. ¡Espero tener la oportunidad de
+          trabajar juntos!
         </p>
       </div>
 
@@ -43,7 +44,7 @@ const PersonalInfo = ({ personalImageAlt }: PersonalInfoProps) => {
         src="/js.webp"
         alt={personalImageAlt}
         className="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
-        style={{ objectPosition: "50% 50%", width: "200px", height: "200px" }}
+        style={{ objectPosition: '50% 50%', width: '200px', height: '200px' }}
       />
     </article>
   );
