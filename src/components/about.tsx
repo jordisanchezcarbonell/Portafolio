@@ -1,24 +1,26 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import { useSectionInView } from '@/lib/hooks';
+
 import React from 'react';
+import SectionHeading from './section-heading';
 import { motion } from 'framer-motion';
+import { useSectionInView } from '@/lib/hooks';
+import SectionHeadingTest from './section-heading-about';
 
-interface PersonalInfoProps {
-  personalImageAlt: string;
-}
+export default function About() {
+  const { ref } = useSectionInView('Sobre mi');
 
-const PersonalInfo = ({ personalImageAlt }: PersonalInfoProps) => {
-  const { ref } = useSectionInView('Sobremí');
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="max-w-[50rem] mb-28 text-center leading-8 sm:mb-40 scroll-mt-28 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      id="aboutme"
+      id="about"
     >
+      <SectionHeadingTest />
+
       <article
         className="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
         ref={ref}
@@ -50,13 +52,11 @@ const PersonalInfo = ({ personalImageAlt }: PersonalInfoProps) => {
 
         <img
           src="/js.webp"
-          alt={personalImageAlt}
+          alt="js logo"
           className="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
           style={{ objectPosition: '50% 50%', width: '200px', height: '200px' }}
         />
       </article>
     </motion.section>
   );
-};
-
-export default PersonalInfo;
+}
