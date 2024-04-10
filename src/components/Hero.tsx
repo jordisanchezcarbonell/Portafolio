@@ -12,7 +12,7 @@ const personalImageAlt: string = 'Jordi Sánchez Carbonell';
 const HomePageContent: React.FC = () => {
   const { ref } = useSectionInView('Inicio');
   return (
-    <div className="max-w-xl" id="Experiencia" ref={ref}>
+    <div className="max-w-xl" ref={ref} id="inicio">
       <div className="flex gap-4 mb-4">
         <img
           className="rounded-full shadow-lg size-16"

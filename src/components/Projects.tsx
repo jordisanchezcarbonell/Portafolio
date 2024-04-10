@@ -181,7 +181,7 @@ const PROJECTS: Project[] = [
 const ProjectList: React.FC = () => {
   const { ref } = useSectionInView('Proyectos');
   return (
-    <div className="flex flex-col gap-y-16" ref={ref} id="proyects">
+    <div className="flex flex-col gap-y-16" ref={ref} id="proyectos">
       {PROJECTS.map(
         ({ image, title, description, tags, link, github }, index) => (
           <article
